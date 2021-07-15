@@ -17,20 +17,20 @@ ui <- fluidPage(
       sliderInput(inputId = "Time", label = "Choose total length of time series", 
               value = 50000, min = 1000, max = 100000),
   
-  sliderInput(inputId = "Num", label = "Choose number of observations per approximately stationary block", 
+      sliderInput(inputId = "Num", label = "Choose number of observations per approximately stationary block", 
               value = 500, min = 100, max = 1000),
   
-  sliderInput(inputId = "Tapers", label = "Choose number of tapers to use in multitaper spectral estimator", 
+      sliderInput(inputId = "Tapers", label = "Choose number of tapers to use in multitaper spectral estimator", 
               value = 15, min = 0, max = 50),
   
-  radioButtons(inputId = "Signi", label = "Choose significance level to use for testing partition points using FRESH statistic", 
+      radioButtons(inputId = "Signi", label = "Choose significance level to use for testing partition points using FRESH statistic", 
               c("0.5" = 0.5, "0.1" = 0.1, "0.05" = 0.05, "0.01" = 0.01), selected = "0.05"),
   
-  radioButtons(inputId = "TF", label = "Should the variance of each stationary block be set to one across all blocks?", 
+      radioButtons(inputId = "TF", label = "Should the variance of each stationary block be set to one across all blocks?", 
              c("True" = TRUE, "False" = FALSE), selected = FALSE)
     ),
-  mainPanel(
-  plotOutput("Image_Plot")
+    mainPanel(
+    plotOutput("Image_Plot")
   )
 ))
 

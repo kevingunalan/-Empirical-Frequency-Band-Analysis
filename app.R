@@ -11,6 +11,10 @@ ui <- fluidPage(
   tags$h1("Empirical Frequency Band Analysis"),
   tags$a(tags$strong(tags$em("Source: Empirical Frequency Band Analysis of Nonstationary Time Series")), 
          href = "https://www.tandfonline.com/doi/full/10.1080/01621459.2019.1671199"),
+  tags$p(tags$em("Research reported in thos publication was supported by the National Insitute Of General Medical Sciences 
+         of the National Institutes of Health under Award Number R01GM140476. The content is solely the responsbility
+         of the authors and does not necessarily represent the official views of the National Institutes of Health")),
+  tags$p(tags$strong("Authors: Tejaswini Prakash, Kevin Gunalan Antony Michael Raj")), (tags$em(tags$u("Under the guidance of Professor Scott Bruce"))),
   tags$hr(),
   sidebarLayout(
     sidebarPanel(
@@ -64,7 +68,6 @@ server <- function(input,output) {
     
     })
   
-  renderPrint(ebaout.wn$flat)
 }
 
 shinyApp(ui = ui, server = server)
